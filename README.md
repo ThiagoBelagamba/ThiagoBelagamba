@@ -1,8 +1,8 @@
 # Olá, eu sou Thiago Belagamba Bueno 👋
 
-**Desenvolvedor de Software (Remoto)** · **Estudante de Ciência da Computação** (7º semestre)
+**Desenvolvedor Full-Stack** · **Estudante de Ciência da Computação** (7º semestre)
 
-Foco em **automação de backend**, **segurança de APIs**, **web scraping** e **DevOps** — construindo sistemas robustos, seguros e eficientes.
+Construo produtos SaaS **self-hosted** de ponta a ponta — APIs hexagonais, frontends React/Next.js, workers assíncronos e infraestrutura Docker. Foco em **automação de backend**, **segurança de APIs**, **web scraping** e **DevOps**.
 
 [English version below](#-hi-im-thiago-belagamba-bueno-)
 
@@ -10,9 +10,9 @@ Foco em **automação de backend**, **segurança de APIs**, **web scraping** e *
 
 ## Sobre mim
 
-Desenvolvedor com mentalidade **security-first** e preferência por **controle total da infraestrutura**. Trabalho com soluções conteinerizadas e hospedadas localmente, priorizando autonomia em vez de dependência de BaaS.
+Desenvolvedor solo responsável por **três linhas de produto** sob o ecossistema [Publix IA](https://publix.ia.br): **Disparo Rápido**, **Lead Rápido** e **Push Rápido** — da API ao site, passando por CRM, extensão Chrome e painéis administrativos.
 
-Acredito em código limpo, consultas SQL otimizadas e workers em background para tarefas pesadas — sempre pensando em manutenibilidade e colaboração em equipe.
+Mentalidade **security-first**: JWT com controle de sessões, rate limiting, device fingerprinting, score de risco e RASP. Prefiro **PostgreSQL local**, **Docker** e **workers em background** em vez de dependência de BaaS.
 
 ---
 
@@ -37,53 +37,86 @@ Acredito em código limpo, consultas SQL otimizadas e workers em background para
 
 ## Stack tecnológica
 
-### Bancos de dados
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
-
-PostgreSQL com instâncias locais otimizadas. Rigor com modelagem de dados e definição de chaves primárias.
-
-### DevOps e infraestrutura
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
-![Portainer](https://img.shields.io/badge/Portainer-13BEF9?style=flat&logo=portainer&logoColor=white)
+![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat&logo=rabbitmq&logoColor=white)
 
-Orquestração e gerenciamento de contêineres com Docker e Portainer.
-
-### Automações e integrações
-![n8n](https://img.shields.io/badge/n8n-FF6D5A?style=flat&logo=n8n&logoColor=white)
-
-Fluxos complexos com **n8n** e integrações via **Evolution API**.
-
-### Documentação
-![LaTeX](https://img.shields.io/badge/LaTeX%20%2F%20LuaLaTeX-008080?style=flat&logo=latex&logoColor=white)
-
-Relatórios e documentação técnica com LaTeX / LuaLaTeX (Overleaf).
+| Área | Tecnologias |
+|------|-------------|
+| **Backend** | Express, Fastify, Inversify (DI), arquitetura hexagonal, OpenTelemetry |
+| **Frontend** | React, Vite, Next.js, Tailwind, shadcn/ui, TanStack Query |
+| **Dados** | PostgreSQL, Knex/Prisma, Redis, Supabase |
+| **Async** | RabbitMQ, workers dedicados, jobs de reconciliação |
+| **Pagamentos** | Asaas (assinaturas, PIX automático, webhooks) |
+| **Infra** | Docker, Portainer, Netlify, n8n |
+| **Extensões** | Chrome MV3, @wppconnect/wa-js |
+| **Docs** | LaTeX / LuaLaTeX (Overleaf), Swagger |
 
 ---
 
-## Projetos em destaque
+## Produtos que construí
 
-### Lead Rápido
-> Plataforma comercial de web scraping para geração de leads B2B · também TCC
+### Disparo Rápido — Automação WhatsApp
+> [disparorapido.com.br](https://disparorapido.com.br) · Ecossistema completo
 
-- Captura e enriquecimento de dados empresariais
-- Integração com CRMs
-- Envio automatizado de planilhas por e-mail
-- Preocupações com segurança e privacidade de dados
+| Componente | Descrição |
+|------------|-----------|
+| **API** | Backend hexagonal com billing Asaas, webhooks, alocação de leads mensais, jobs de reconciliação e OpenTelemetry |
+| **CRM** | Console multi-tenant: campanhas, funil, assinaturas, créditos, afiliados, lead-agent com IA |
+| **Extensão Chrome** | Disparo em massa no WhatsApp Web — auth JWT, LID resolution, rate limiting e anti-ban |
+| **Site** | Landing pages, checkout, funis de afiliados e SEO agent-first |
 
-### Disparo Rápido
-> Automação de WhatsApp via Evolution API
+---
 
-- Recuperação de checkout abandonado
-- Funis de e-mail de follow-up
-- Implementação de reCAPTCHA v3
-- Protocolos anti-ban e mitigação de bloqueios
+### Lead Rápido — Geração de Leads B2B
+> Plataforma comercial de venda de listas empresariais · TCC
 
-### Segurança de APIs e sistemas administrativos
-> Métricas e intervenções baseadas em dados
+| Componente | Descrição |
+|------------|-----------|
+| **API** | Catálogo público, cotação, checkout Asaas e API interna de alocação de leads |
+| **Site** | Catálogo com filtros por estado/segmento, checkout in-page e blog MDX |
 
-- Lógicas de **Score de Risco** para avaliação de requisições
-- Finish hooks para registro de pontuações de segurança
-- Decisões automatizadas sobre WAF, rate limiting e bloqueios
+---
+
+### Push Rápido — Notificações Web Push
+> Plataforma self-hosted de push notifications
+
+| Componente | Descrição |
+|------------|-----------|
+| **API + Worker** | Monorepo Fastify com filas RabbitMQ, SDK embeddable e dispatch throttled |
+| **Admin** | Dashboard Next.js para sites, inscrições e campanhas |
+
+---
+
+### TraceGuard — Observabilidade & Segurança *(TCC)*
+> Plataforma APM com tracing distribuído, alertas e RASP
+
+- Ingestão de telemetria com `AsyncLocalStorage` e dashboard em tempo real via WebSocket
+- Middleware RASP: detecção de bots, rate limiting e bloqueio de scans sequenciais
+- Monorepo pnpm: backend, dashboard, SDK embeddable e módulo de uptime monitoring
+
+---
+
+### Projetos para clientes
+
+| Projeto | Stack | Destaque |
+|---------|-------|----------|
+| **JECON Consórcios** | Next.js 15, App Router | Simulador de consórcio, captura de leads e webhook de abandono (n8n) |
+| **Publix IA** | React, Vite | Landing institucional com animações e formulário de propostas |
+
+---
+
+## O que isso demonstra
+
+- **Full-stack solo**: da modelagem SQL ao deploy em produção
+- **Arquitetura limpa**: hexagonal com DI, feature-based modules, separação API/worker
+- **Monetização real**: assinaturas, créditos, afiliados, marketplace e venda direta de leads
+- **Segurança aplicada**: sessões, fingerprinting, rate limiting, score de risco e RASP
+- **Automação em escala**: webhooks, jobs de background, dispatch em massa e push campaigns
 
 ---
 
@@ -91,21 +124,10 @@ Relatórios e documentação técnica com LaTeX / LuaLaTeX (Overleaf).
 
 | Princípio | Abordagem |
 |-----------|-----------|
-| **Autonomia** | Soluções self-hosted e conteinerizadas |
-| **Segurança** | Integridade de API, bloqueio de requisições maliciosas |
-| **Eficiência** | SQL otimizado e workers para processamento em background |
-| **Colaboração** | Código legível e fácil de revisar |
-
----
-
-## O que você encontra neste perfil
-
-O código aqui costuma estar ligado a um destes ecossistemas:
-
-- Plataformas de **web scraping** e geração de leads
-- **Automações** de mensageria e integrações
-- **APIs seguras** com métricas e controles de risco
-- Pipelines de **DevOps** e infraestrutura containerizada
+| **Autonomia** | Self-hosted, containerizado, controle total da infra |
+| **Segurança** | JWT, rate limiting, device licensing, RASP e métricas de risco |
+| **Eficiência** | SQL otimizado, filas assíncronas e workers para carga pesada |
+| **Colaboração** | Código tipado, documentado e pronto para revisão em equipe |
 
 ---
 
@@ -121,9 +143,9 @@ O código aqui costuma estar ligado a um destes ecossistemas:
 
 # 👋 Hi, I'm Thiago Belagamba Bueno
 
-**Software Developer (Remote)** · **Computer Science Student** (7th semester)
+**Full-Stack Developer (Remote)** · **Computer Science Student** (7th semester)
 
-Focused on **backend automation**, **API security**, **web scraping**, and **DevOps** — building robust, secure, and efficient systems.
+I build **self-hosted SaaS products** end-to-end — hexagonal APIs, React/Next.js frontends, async workers, and Docker infrastructure. Focused on **backend automation**, **API security**, **web scraping**, and **DevOps**.
 
 [Versão em português acima](#-olá-eu-sou-thiago-belagamba-bueno-)
 
@@ -131,55 +153,52 @@ Focused on **backend automation**, **API security**, **web scraping**, and **Dev
 
 ## About me
 
-Developer with a **security-first** mindset and a preference for **full infrastructure control**. I work with containerized, self-hosted solutions, prioritizing autonomy over BaaS dependencies.
+Solo developer behind **three product lines** under the [Publix IA](https://publix.ia.br) ecosystem: **Disparo Rápido**, **Lead Rápido**, and **Push Rápido** — from API to marketing site, CRM, Chrome extension, and admin dashboards.
 
-I believe in clean code, optimized SQL queries, and background workers for heavy tasks — always with maintainability and team collaboration in mind.
+**Security-first** mindset: JWT session control, rate limiting, device fingerprinting, risk scoring, and RASP. I prefer **local PostgreSQL**, **Docker**, and **background workers** over BaaS dependencies.
 
 ---
 
 ## Tech stack
 
-| Area | Tools |
-|------|-------|
-| **Databases** | PostgreSQL (local, optimized instances) |
-| **DevOps** | Docker, Portainer |
-| **Automation** | n8n, Evolution API |
-| **Documentation** | LaTeX / LuaLaTeX (Overleaf) |
+| Area | Technologies |
+|------|-------------|
+| **Backend** | Express, Fastify, Inversify (DI), hexagonal architecture, OpenTelemetry |
+| **Frontend** | React, Vite, Next.js, Tailwind, shadcn/ui, TanStack Query |
+| **Data** | PostgreSQL, Knex/Prisma, Redis, Supabase |
+| **Async** | RabbitMQ, dedicated workers, reconciliation jobs |
+| **Payments** | Asaas (subscriptions, automatic PIX, webhooks) |
+| **Infra** | Docker, Portainer, Netlify, n8n |
+| **Extensions** | Chrome MV3, @wppconnect/wa-js |
 
 ---
 
-## Featured projects
+## Products I built
 
-### Lead Rápido
-B2B lead generation platform via web scraping · commercial project & graduation thesis (TCC)
+### Disparo Rápido — WhatsApp Automation
+Full ecosystem: hexagonal API with Asaas billing, multi-tenant CRM, Chrome extension for bulk messaging, and conversion-focused marketing site.
 
-### Disparo Rápido
-WhatsApp automation tool using Evolution API — checkout recovery, follow-up funnels, reCAPTCHA v3, and anti-ban protocols
+### Lead Rápido — B2B Lead Generation
+Commercial lead sales platform with public catalog API, in-page checkout, and internal lead allocation — also my graduation thesis.
 
-### API Security & Admin Systems
-Data-driven security metrics, risk scoring, finish hooks, and automated WAF / rate limiting decisions
+### Push Rápido — Web Push Notifications
+Self-hosted push platform with Fastify API, RabbitMQ workers, embeddable SDK, and Next.js admin dashboard.
 
----
+### TraceGuard — Observability & Security *(Capstone)*
+APM platform with distributed tracing, real-time WebSocket dashboard, alert fatigue mitigation, and RASP middleware.
 
-## Architecture principles
-
-| Principle | Approach |
-|-----------|----------|
-| **Autonomy** | Self-hosted, containerized solutions |
-| **Security** | API integrity, malicious request blocking |
-| **Efficiency** | Optimized SQL and background workers |
-| **Collaboration** | Clean, reviewable code |
+### Client projects
+**JECON Consórcios** (Next.js consortium simulator + lead capture) · **Publix IA** (institutional landing page)
 
 ---
 
-## What you'll find here
+## What this demonstrates
 
-Code in this profile is often related to:
-
-- **Web scraping** and lead generation platforms
-- Messaging **automation** and integrations
-- **Secure APIs** with risk metrics and controls
-- **DevOps** pipelines and containerized infrastructure
+- **Solo full-stack**: from SQL modeling to production deployment
+- **Clean architecture**: hexagonal with DI, feature modules, API/worker separation
+- **Real monetization**: subscriptions, credits, affiliates, marketplace, direct lead sales
+- **Applied security**: sessions, fingerprinting, rate limiting, risk scoring, RASP
+- **Automation at scale**: webhooks, background jobs, bulk dispatch, push campaigns
 
 ---
 
