@@ -54,7 +54,7 @@ Mentalidade **security-first**: JWT com controle de sessões, rate limiting, dev
 ---
 
 ### Lead Rápido — Geração de Leads B2B
-> Plataforma comercial de venda de listas empresariais · TCC
+> Plataforma comercial de venda de listas empresariais
 
 | Componente | Descrição |
 |------------|-----------|
