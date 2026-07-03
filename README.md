@@ -1,6 +1,6 @@
 # Olá, eu sou Thiago Belagamba Bueno 👋
 
-**Desenvolvedor Full-Stack** · **Estudante de Ciência da Computação** (7º semestre)
+**Desenvolvedor Full-Stack** · **Estudante de Ciência da Computação** (8º semestre)
 
 Construo produtos SaaS **self-hosted** de ponta a ponta — APIs hexagonais, frontends React/Next.js, workers assíncronos e infraestrutura Docker. Foco em **automação de backend**, **segurança de APIs**, **web scraping** e **DevOps**.
 
